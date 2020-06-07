@@ -15,7 +15,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@vakt/nominations/feature-home": [
+        "libs/nominations/feature-home/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

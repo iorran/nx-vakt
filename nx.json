@@ -25,6 +25,9 @@
     "commodity-e2e": {
       "tags": [],
       "implicitDependencies": ["commodity"]
+    },
+    "nominations-feature-home": {
+      "tags": ["nominations-home"]
     }
   }
 }
