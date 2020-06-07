@@ -18,5 +18,13 @@
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "commodity": {
+      "tags": ["commodity"]
+    },
+    "commodity-e2e": {
+      "tags": [],
+      "implicitDependencies": ["commodity"]
+    }
+  }
 }

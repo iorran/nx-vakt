@@ -1,8 +1,118 @@
 {
   "version": 1,
-  "projects": {},
+  "projects": {
+    "commodity": {
+      "root": "apps/commodity",
+      "sourceRoot": "apps/commodity/src",
+      "projectType": "application",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/web:build",
+          "options": {
+            "outputPath": "dist/apps/commodity",
+            "index": "apps/commodity/src/index.html",
+            "main": "apps/commodity/src/main.tsx",
+            "polyfills": "apps/commodity/src/polyfills.ts",
+            "tsConfig": "apps/commodity/tsconfig.app.json",
+            "assets": [
+              "apps/commodity/src/favicon.ico",
+              "apps/commodity/src/assets"
+            ],
+            "styles": [],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/commodity/src/environments/environment.ts",
+                  "with": "apps/commodity/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "commodity:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "commodity:build:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "apps/commodity/.eslintrc",
+            "tsConfig": [
+              "apps/commodity/tsconfig.app.json",
+              "apps/commodity/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/commodity/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/commodity/jest.config.js",
+            "tsConfig": "apps/commodity/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "commodity-e2e": {
+      "root": "apps/commodity-e2e",
+      "sourceRoot": "apps/commodity-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/commodity-e2e/cypress.json",
+            "tsConfig": "apps/commodity-e2e/tsconfig.e2e.json",
+            "devServerTarget": "commodity:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "commodity:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "apps/commodity-e2e/.eslintrc",
+            "tsConfig": ["apps/commodity-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/commodity-e2e/**"]
+          }
+        }
+      }
+    }
+  },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
+    "defaultCollection": "@nrwl/react"
   },
   "schematics": {
     "@nrwl/workspace": {
@@ -17,13 +127,19 @@
     },
     "@nrwl/react": {
       "application": {
-        "linter": "eslint"
+        "style": "styled-components",
+        "linter": "eslint",
+        "babel": true
       },
       "library": {
+        "style": "styled-components",
         "linter": "eslint"
       },
       "storybook-configuration": {
         "linter": "eslint"
+      },
+      "component": {
+        "style": "styled-components"
       }
     },
     "@nrwl/next": {
@@ -62,5 +178,6 @@
         "linter": "eslint"
       }
     }
-  }
+  },
+  "defaultProject": "commodity"
 }
