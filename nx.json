@@ -28,6 +28,9 @@
     },
     "nominations-feature-home": {
       "tags": ["nominations-home"]
+    },
+    "bfoet-feature-home": {
+      "tags": ["bfoet-home"]
     }
   }
 }

@@ -140,6 +140,34 @@
           }
         }
       }
+    },
+    "bfoet-feature-home": {
+      "root": "libs/bfoet/feature-home",
+      "sourceRoot": "libs/bfoet/feature-home/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/bfoet/feature-home/.eslintrc",
+            "tsConfig": [
+              "libs/bfoet/feature-home/tsconfig.lib.json",
+              "libs/bfoet/feature-home/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/bfoet/feature-home/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/bfoet/feature-home/jest.config.js",
+            "tsConfig": "libs/bfoet/feature-home/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

@@ -18,6 +18,10 @@
     "paths": {
       "@vakt/nominations/feature-home": [
         "libs/nominations/feature-home/src/index.ts"
+      ],
+      "@vakt/bfoet/feature-home": ["libs/bfoet/feature-home/src/index.ts"],
+      "@vakt/inspectors/feature-home": [
+        "libs/inspectors/feature-home/src/index.ts"
       ]
     }
   },
