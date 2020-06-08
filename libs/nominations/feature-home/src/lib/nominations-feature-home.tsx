@@ -6,7 +6,7 @@ import styled from 'styled-components';
 export interface NominationsFeatureHomeProps {}
 
 const StyledNominationsFeatureHome = styled.div`
-  color: pink;
+  color: blue;
 `;
 
 export const NominationsFeatureHome = (props: NominationsFeatureHomeProps) => {

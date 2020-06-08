@@ -1,18 +1,13 @@
 import React from 'react';  
 
-import { Link } from 'react-router-dom';
-import Routes from './routes';
+import { SharedUiHeader } from '@vakt/shared/ui-header';   
+import { SharedUtilRouting } from '@vakt/shared/util-routing';   
  
 export const App = () => {
   return (
-    <>
-    <Link to="/">
-      Home
-    </Link>
-      <Link to="/nominations">
-        Nominations
-      </Link>
-      <Routes />
+    <> 
+      <SharedUiHeader />  
+      <SharedUtilRouting />
     </>
   );
 };
