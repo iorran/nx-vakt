@@ -1,6 +1,7 @@
 import React from 'react';
 
 import styled from 'styled-components';
+import { SharedUiButton } from '@vakt/shared/ui-button';
 
 /* eslint-disable-next-line */
 export interface NominationsFeatureHomeProps {}
@@ -13,6 +14,7 @@ export const NominationsFeatureHome = (props: NominationsFeatureHomeProps) => {
   return (
     <StyledNominationsFeatureHome>
       <h1>Welcome to nominations-feature-home!</h1>
+      <SharedUiButton> Click me </SharedUiButton>
     </StyledNominationsFeatureHome>
   );
 };

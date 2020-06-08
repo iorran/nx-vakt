@@ -224,6 +224,34 @@
           }
         }
       }
+    },
+    "shared-ui-button": {
+      "root": "libs/shared/ui-button",
+      "sourceRoot": "libs/shared/ui-button/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/shared/ui-button/.eslintrc",
+            "tsConfig": [
+              "libs/shared/ui-button/tsconfig.lib.json",
+              "libs/shared/ui-button/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/ui-button/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/ui-button/jest.config.js",
+            "tsConfig": "libs/shared/ui-button/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

@@ -37,6 +37,9 @@
     },
     "shared-util-routing": {
       "tags": []
+    },
+    "shared-ui-button": {
+      "tags": []
     }
   }
 }

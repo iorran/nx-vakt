@@ -24,7 +24,8 @@
         "libs/inspectors/feature-home/src/index.ts"
       ],
       "@vakt/shared/ui-header": ["libs/shared/ui-header/src/index.ts"],
-      "@vakt/shared/util-routing": ["libs/shared/util-routing/src/index.ts"]
+      "@vakt/shared/util-routing": ["libs/shared/util-routing/src/index.ts"],
+      "@vakt/shared/ui-button": ["libs/shared/ui-button/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
