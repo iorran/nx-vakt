@@ -22,7 +22,8 @@
       "@vakt/bfoet/feature-home": ["libs/bfoet/feature-home/src/index.ts"],
       "@vakt/inspectors/feature-home": [
         "libs/inspectors/feature-home/src/index.ts"
-      ]
+      ],
+      "@vakt/shared/ui-header": ["libs/shared/ui-header/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

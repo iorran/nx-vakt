@@ -31,6 +31,9 @@
     },
     "bfoet-feature-home": {
       "tags": ["bfoet-home"]
+    },
+    "shared-ui-header": {
+      "tags": ["shared-header"]
     }
   }
 }
