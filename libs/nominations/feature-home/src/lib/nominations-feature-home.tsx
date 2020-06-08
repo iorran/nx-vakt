@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
 import styled from 'styled-components';
 import { SharedUiButton } from '@vakt/shared/ui-button';
+import { useDispatch } from 'react-redux';
+import { tradeActions, TradeEntity } from './redux/trade.slice';
+import { SalesGrid } from './sales-grid/sales-grid';
 
 /* eslint-disable-next-line */
 export interface NominationsFeatureHomeProps {}
@@ -11,10 +14,21 @@ const StyledNominationsFeatureHome = styled.div`
 `;
 
 export const NominationsFeatureHome = (props: NominationsFeatureHomeProps) => {
+  const dispatch = useDispatch();
+
+  const addTrade = useCallback(
+    () => { 
+      const trade: TradeEntity = {id: Math.random()};
+      dispatch(tradeActions.addTrade(trade));
+    },
+    [dispatch]
+  );
+
   return (
     <StyledNominationsFeatureHome>
       <h1>Welcome to nominations-feature-home!</h1>
-      <SharedUiButton> Click me </SharedUiButton>
+      <SharedUiButton onClick={addTrade}> Add new trade </SharedUiButton>
+      <SalesGrid />
     </StyledNominationsFeatureHome>
   );
 };

@@ -5,9 +5,25 @@ import { BrowserRouter } from 'react-router-dom';
 
 import App from './app/app';
 
+import { configureStore } from '@reduxjs/toolkit';
+import { Provider } from 'react-redux';
+
+import {
+  TRADE_FEATURE_KEY,
+  tradeReducer,
+} from '@vakt/nominations/feature-home';
+
+const store = configureStore({
+  reducer: {
+    [TRADE_FEATURE_KEY]: tradeReducer,
+  },
+});
+
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
 );
