@@ -3,7 +3,7 @@ import React, { useCallback } from 'react';
 import styled from 'styled-components';
 import { SharedUiButton } from '@vakt/shared/ui-button';
 import { useDispatch } from 'react-redux';
-import { tradeActions, TradeEntity } from './redux/trade.slice';
+import { tradeActions, TradeEntity } from '@vakt/nominations/shared/util-redux';
 import { SalesGrid } from './sales-grid/sales-grid';
 
 /* eslint-disable-next-line */

@@ -25,7 +25,13 @@
       ],
       "@vakt/shared/ui-header": ["libs/shared/ui-header/src/index.ts"],
       "@vakt/shared/util-routing": ["libs/shared/util-routing/src/index.ts"],
-      "@vakt/shared/ui-button": ["libs/shared/ui-button/src/index.ts"]
+      "@vakt/shared/ui-button": ["libs/shared/ui-button/src/index.ts"],
+      "@vakt/nominations/util-redux": [
+        "libs/nominations/util-redux/src/index.ts"
+      ],
+      "@vakt/nominations/shared/util-redux": [
+        "libs/nominations/shared/util-redux/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

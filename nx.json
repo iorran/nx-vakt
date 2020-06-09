@@ -40,6 +40,12 @@
     },
     "shared-ui-button": {
       "tags": []
+    },
+    "nominations-util-redux": {
+      "tags": []
+    },
+    "nominations-shared-util-redux": {
+      "tags": ["nominations-redux"]
     }
   }
 }

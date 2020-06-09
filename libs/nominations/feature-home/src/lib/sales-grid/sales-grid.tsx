@@ -3,7 +3,7 @@ import React, { useEffect, useMemo } from 'react';
 import styled from 'styled-components';
 
 import { shallowEqual, useSelector, useDispatch } from 'react-redux'
-import { tradeSelectors, tradeActions } from '../redux/trade.slice';
+import { tradeSelectors, tradeActions } from '@vakt/nominations/shared/util-redux';
 
 /* eslint-disable-next-line */
 export interface SalesGridProps {}

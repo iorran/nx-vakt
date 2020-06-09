@@ -252,6 +252,65 @@
           }
         }
       }
+    },
+    "nominations-util-redux": {
+      "root": "libs/nominations/util-redux",
+      "sourceRoot": "libs/nominations/util-redux/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/nominations/util-redux/.eslintrc",
+            "tsConfig": [
+              "libs/nominations/util-redux/tsconfig.lib.json",
+              "libs/nominations/util-redux/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/nominations/util-redux/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/nominations/util-redux/jest.config.js",
+            "tsConfig": "libs/nominations/util-redux/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "nominations-shared-util-redux": {
+      "root": "libs/nominations/shared/util-redux",
+      "sourceRoot": "libs/nominations/shared/util-redux/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/nominations/shared/util-redux/.eslintrc",
+            "tsConfig": [
+              "libs/nominations/shared/util-redux/tsconfig.lib.json",
+              "libs/nominations/shared/util-redux/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/nominations/shared/util-redux/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/nominations/shared/util-redux/jest.config.js",
+            "tsConfig": "libs/nominations/shared/util-redux/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

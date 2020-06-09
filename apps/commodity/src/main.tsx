@@ -7,15 +7,15 @@ import App from './app/app';
 
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
-
+ 
 import {
   TRADE_FEATURE_KEY,
   tradeReducer,
-} from '@vakt/nominations/feature-home';
+} from '@vakt/nominations/shared/util-redux';
 
 const store = configureStore({
   reducer: {
-    [TRADE_FEATURE_KEY]: tradeReducer,
+    [TRADE_FEATURE_KEY]: tradeReducer, 
   },
 });
 
