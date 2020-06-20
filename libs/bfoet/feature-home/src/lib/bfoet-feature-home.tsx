@@ -7,7 +7,7 @@ import { SharedUiButton } from '@vakt/shared/ui-button';
 export interface BfoetFeatureHomeProps {}
 
 const StyledBfoetFeatureHome = styled.div`
-  color: blue;
+  color: red;
 `;
 
 export const BfoetFeatureHome = (props: BfoetFeatureHomeProps) => {
