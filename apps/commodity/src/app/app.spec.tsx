@@ -16,13 +16,13 @@ describe('App', () => {
     expect(baseElement).toBeTruthy();
   });
 
-  it('should have a greeting as the title', () => {
+  it('should have a bfoet-feature-home as the title', () => {
     const { getByText } = render(
       <BrowserRouter>
         <App />
       </BrowserRouter>
     );
 
-    expect(getByText('Welcome to commodity!')).toBeTruthy();
+    expect(getByText('Welcome to bfoet-feature-home!')).toBeTruthy();
   });
 });

@@ -35,13 +35,7 @@
     "shared-ui-header": {
       "tags": ["shared-header"]
     },
-    "shared-util-routing": {
-      "tags": []
-    },
     "shared-ui-button": {
-      "tags": []
-    },
-    "nominations-util-redux": {
       "tags": []
     },
     "nominations-shared-util-redux": {

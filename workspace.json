@@ -197,34 +197,6 @@
         }
       }
     },
-    "shared-util-routing": {
-      "root": "libs/shared/util-routing",
-      "sourceRoot": "libs/shared/util-routing/src",
-      "projectType": "library",
-      "schematics": {},
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:lint",
-          "options": {
-            "linter": "eslint",
-            "config": "libs/shared/util-routing/.eslintrc",
-            "tsConfig": [
-              "libs/shared/util-routing/tsconfig.lib.json",
-              "libs/shared/util-routing/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/shared/util-routing/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/shared/util-routing/jest.config.js",
-            "tsConfig": "libs/shared/util-routing/tsconfig.spec.json",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
     "shared-ui-button": {
       "root": "libs/shared/ui-button",
       "sourceRoot": "libs/shared/ui-button/src",
@@ -248,34 +220,6 @@
           "options": {
             "jestConfig": "libs/shared/ui-button/jest.config.js",
             "tsConfig": "libs/shared/ui-button/tsconfig.spec.json",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "nominations-util-redux": {
-      "root": "libs/nominations/util-redux",
-      "sourceRoot": "libs/nominations/util-redux/src",
-      "projectType": "library",
-      "schematics": {},
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:lint",
-          "options": {
-            "linter": "eslint",
-            "config": "libs/nominations/util-redux/.eslintrc",
-            "tsConfig": [
-              "libs/nominations/util-redux/tsconfig.lib.json",
-              "libs/nominations/util-redux/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/nominations/util-redux/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/nominations/util-redux/jest.config.js",
-            "tsConfig": "libs/nominations/util-redux/tsconfig.spec.json",
             "passWithNoTests": true
           }
         }
