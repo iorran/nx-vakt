@@ -5,9 +5,9 @@ const BfoetFeatureHome = lazy(() => import('@vakt/bfoet/feature-home').then(({ B
 const NominationsFeatureHome = lazy(() => import('@vakt/nominations/feature-home').then(({ NominationsFeatureHome }) => ({ default: NominationsFeatureHome })));
 
 /* eslint-disable-next-line */
-export interface SharedUtilRoutingProps {} 
+export interface RoutesProps {} 
 
-export const SharedUtilRouting = (props: SharedUtilRoutingProps) => {
+export const Routes = (props: RoutesProps) => {
   return (
     <Suspense fallback={<div>Loading...</div>}>  
       <Switch> 
@@ -20,4 +20,6 @@ export const SharedUtilRouting = (props: SharedUtilRoutingProps) => {
   );
 };
 
-export default SharedUtilRouting;
+export default Routes;
+
+ 
