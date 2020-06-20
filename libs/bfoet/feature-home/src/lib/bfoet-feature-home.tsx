@@ -14,7 +14,7 @@ export const BfoetFeatureHome = (props: BfoetFeatureHomeProps) => {
   return (
     <StyledBfoetFeatureHome>
       <h1>Welcome to bfoet-feature-home!</h1>  
-      <SharedUiButton> Click me </SharedUiButton>
+      <SharedUiButton> Click me! </SharedUiButton>
     </StyledBfoetFeatureHome>
   );
 };
